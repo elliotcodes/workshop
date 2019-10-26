@@ -1,0 +1,349 @@
+    1  nano
+    2  git -- version
+    3  git --version
+    4  nano --version
+    5  nano
+    6  cd ~/Desktop/workshop/unix_intro
+    7  ls
+    8  date
+    9  date -u
+   10  head example.txt
+   11  head -n 5 example.txt
+   12  head --help
+   13  man head
+   14  pwd
+   15  ls
+   16  head example.txt
+   17  head notes.txt
+   18  head experiment/notes.txt
+   19  head example.txt 
+   20  head ex
+   21  head example.txt 
+   22  he
+   23  help 
+   24  he
+   25  cd experiment
+   26  cd experiment/
+   27  owd
+   28  cd experiment/
+   29  cd ~/Desktop/workshop/unix_intro
+   30  cd experiment/
+   31  owd
+   32  pwd
+   33  ls
+   34  head notes.txt 
+   35  pwd
+   36  cd ..
+   37  pwd
+   38  cd ~/Desktop/workshop/unix_intro
+   39  head example.txt
+   40  tail example.txt
+   41  less example.txt 
+   42  wc example.txt 
+   43  man wc
+   44  wc -;
+   45  wc -l
+   46  cd ~/Desktop/workshop/unix_intro
+   47  cd ~/Desktop/workshop/unix_intro
+   48  head example.txt
+   49  tail example.txt
+   50  less example.txt
+   51  wc example.txt 
+   52  wc -l example.txt 
+   53  man wc
+   54  ls
+   55  cp example.txt example_copy.txt
+   56  ls
+   57  ls
+   58  cp example.txt example_copy.txt
+   59  ls
+   60  ls data/
+   61  cp example.txt data/example_copy.txt
+   62  ls data/
+   63  ls
+   64  ls experiment/
+   65  mv example_copy.txt experiment/
+   66  ls
+   67  ls experiment/
+   68  ls
+   69  ls experiment/
+   70  mv example_copy.txt experiment/
+   71  ls
+   72  experiment/
+   73  ls
+   74  mv notes.txt notes_old.txt
+   75  ls
+   76  ls
+   77  rm notes_old.txt
+   78  ls
+   79  nano sample_names.txt
+   80  head sample_names.txt 
+   81  ls
+   82  mkdir
+   83  ls
+   84  mkdir subset
+   85  ls
+   86  rmdir subset/
+   87  ls
+   88  rmdir
+   89  rmdir experiment/
+   90  cp experiment experiment_copy
+   91  cp -r experiment experiment_copy
+   92  ls
+   93  rmdir experiment_copy
+   94  rm -r experiment_copy/
+   95  ls
+   96  cd ~/Desktop/workshop/unix_intro
+   97  pwd
+   98  ls
+   99  mv sample_names.txt sample_names_2.txt
+  100  ls
+  101  wc -l example.txt 
+  102  ls
+  103  ls | wc -l
+  104  ls data/
+  105  ls data/all_samples/
+  106  ls | wc -l
+  107  | wc -l
+  108  | wc -l
+  109  ls data/all_samples/
+  110  | wc -l
+  111  ls data/all_samples/ | wc -l
+  112  ls
+  113  ls > directory_contexts.txt
+  114  ls
+  115  head directory_contexts.txt 
+  116  ls experiment/
+  117  ls experiment/ > directory_contexts.txt 
+  118  head directory_contexts.txt 
+  119  ls >> directory_contexts.txt 
+  120  head directory_contexts.txt 
+  121  ls
+  122  ls *.txt
+  123  cd data/all_samples/
+  124  ls
+  125  ls *.tsv
+  126  ls *.fq
+  127  ls | wc -1
+  128  cd data/all_samples/
+  129  ls
+  130  cd data/all_samples/
+  131  ls
+  132  ls | wc -l
+  133  ls | wc -l *.tsv
+  134  ls *tsv | wc -l
+  135  ls *txt | wc -l
+  136  ls *fq | wc -l
+  137  mkdir fastq_files
+  138  ls fastq_files
+  139  ls *.fq
+  140  mv *.fq fastq_files/
+  141  ls fastq_files/
+  142  ls | wc -l
+  143  history
+  144  history | tail
+  145  history | head
+  146  history | less
+  147  pwd
+  148  cd fastq_files/
+  149  ls
+  150  ls sample_1*.fq
+  151  ls sample_1?.fq
+  152  cd ~/Desktop/workshop/unix_intro
+  153  ls
+  154  cd ~/Desktop/workshop/unix_intro/six_commands/
+  155  head gene_annotations.tsv
+  156  head -n 1 gene_annotations.tsv
+  157  wc -l gene_annotations.tsv
+  158  cut -f 1 gene_annotations.tsv
+  159  cut -f 1 gene_annotations.tsv | head
+  160  cut -f 1,3 gene_annotations.tsv
+  161  cut -f 1,3 gene_annotations.tsv | head
+  162  cut -f 1-2,3-4 gene_annotations.tsv | head
+  163  head colors.txt
+  164  grep blue colors.txt
+  165  grep re colors.txt
+  166  grep black colors.txt
+  167  grep K09765 gene_annotations.tsv
+  168  head -n 1 gene_annotations.tsv
+  169  grep K09765 gene_annotations.tsv
+  170  grep K18979 gene_annotations.tsv
+  171  grep -c K18979 gene_annotations.tsv
+  172  head colores.txt
+  173  paste colors.txt colores.txt
+  174  head genes_and_seqs.tsv
+  175  less -S genes_and_seqs.tsv
+  176  paste gene_annotations.tsv genes_and_seqs.tsv | head -n 1
+  177  paste gene_annotations.tsv genes_and_seqs.tsv | cut -f 1-4,6- | head -n 2
+  178  cd ~/Desktop/workshop/unix_intro
+  179  my_var=ANGUS
+  180  echo $my_var
+  181  echo my_var
+  182  mkdir for_loops
+  183  cd for_loops/
+  184  ls
+  185  pwd
+  186  cd ..
+  187  pwd
+  188  my_new_var="Tucson, Arizona, USA"
+  189  echo $my_new_var
+  190  mkdir for_loops
+  191  cd for_loops/
+  192  pwd
+  193  new_var=welcome_back
+  194  echo $new_var
+  195  for item in earth mars venus; do echo $item; done
+  196  for item in earth mars venus; do echo $item; done
+  197  for item in earth mars venus; do echo $item; echo $item > planets.txt; done
+  198* 
+  199  for item in earth mars venus; do echo $item; echo $item >> planets.txt; done
+  200  ls
+  201  for item in earth mars venus; do   echo $item;   echo $item >> planets.txt; done
+  202  ls
+  203  head planets.txt
+  204  cat planets.txt 
+  205  for item in $(cat planets.txt); do echo $item; done
+  206  for object in $(head directory_contents.txt); do echo $object; done
+  207  pwd
+  208  history
+  209  history > history_unix.txt
+  210  ls
+  211  cat
+  212  cat history_unix.txt
+  213  pwd
+  214  cd ..
+  215  pwd
+  216  cd ..
+  217  pwd
+  218  mkdir git_lesson
+  219  pwd
+  220  cd git_lesson/
+  221  pwd
+  222  ls
+  223  git init
+  224  la
+  225  ls
+  226  ls -a
+  227  pwd
+  228  rmdir .git
+  229  rm -r .git
+  230  ls -a
+  231  pwd
+  232  cd ..
+  233  pwd
+  234  git init
+  235  pwd
+  236  ls -a
+  237  git config --global user.name "Elliot Truslow"
+  238  git config --global user.email "elliot@email.arizona.edu"
+  239  git config --list
+  240  git config --list
+  241  git config --global user.name "Elliot Truslow"
+  242  git config --global user.email "elliot@email.arizona.edu"
+  243  git config --list
+  244  pwd
+  245  ls
+  246  ls -a
+  247  git config --global user.name "Elliot Truslow"
+  248  git config --global user.email "elliot@email.arizona.edu"
+  249  git config --list
+  250  git add --all
+  251  git commit --message "initialize the workshop directory as a repository"
+  252  pwd
+  253  cd git_lesson/
+  254  powd
+  255  pwd
+  256  ls
+  257  touch practice.txt
+  258  ls
+  259  head practice.txt 
+  260  git add practice.txt 
+  261  git commit --message "practiced committing new file"
+  262  git status
+  263  echo > "this is a line that I'm appending to a file" >> practice.txt 
+  264  cat practice.txt 
+  265  echo "this is a line I'm adding to 'practice.txt'" >> practice.txt 
+  266  cat practice.txt 
+  267  git status
+  268  git add practice.txt 
+  269  git status
+  270  git commit --message "we're doing more git practice and using the append >> function"
+  271  git diff
+  272  git status
+  273  git status
+  274  git add
+  275  git add this is a line that I'm appending to a file
+
+  276  "git add"
+  277  git status
+  278  git add practice.txt 
+  279  git diff
+  280  git commit --message "done"
+  281  git diff
+  282  git diff
+  283  git status
+  284  git add practice.txt 
+  285  git commit --message "trying to fix this shit"
+  286  ls
+  287  rm this\ is\ a\ line\ that\ I\'m\ appending\ to\ a\ file 
+  288  git status
+  289  git diff
+  290  echo "This line was added to 'practice.txt' using '>>' in bash" >> practice.txt
+  291  git status
+  292  echo "This line was added to 'practice.txt' using '>>' in bash" >> practice.txt
+  293  echo "This line was added to 'practice.txt' using '>>' in bash" >> practice.txt
+  294  ls
+  295  echo "this is a new try" >> practice.txt
+  296  git diff
+  297  git add practice.txt 
+  298  git status
+  299  git add practice.txt 
+  300  git commit --message "HOORAY"git add"
+  301  git status
+  302  git add practice.txt 
+  303  git commit --message "fuck please work"
+  304  git status
+  305  git log
+  306  nano practice.txt 
+  307  git diff
+  308  git add practice.txt 
+  309  git status
+  310  git commit --message "making changes to the file"
+  311  git status
+  312  nano practice.txt 
+  313  nano practice.txt 
+  314  git diff
+  315  cd ~/Desktop/workshop/git_lesson/
+  316  touch newfile.txt
+  317  git add newfile.txt
+  318  git add practice.txt 
+  319  git status
+  320  git commit --message "adding new file and practice in same commit"
+  321  git status
+  322  git log
+  323  git remote add origin https://github.com/elliotcodes/workshop.git
+  324  git push -u origin master
+  325  git remote add origin https://github.com/elliotcodes/workshop.git
+  326  git push -u origin master
+  327  git remote --verbose
+  328  pwd
+  329  cd ..
+  330  pwd
+  331  git pull
+  332  nano newfile.txt
+  333  git status
+  334  git add newfile.txt 
+  335  git status
+  336  git commit --message "new file to be added"
+  337  git log
+  338  git push
+  339  nano /git-lesson/file.txt
+  340  nano newfile.txt 
+  341  git status
+  342  git add newfile.txt 
+  343  git status
+  344  git commit --message "confirming these changes"
+  345  git push
+  346  history
+  347  history cat git_and_github.txt
+  348  history > history_gitandgithub.txt
