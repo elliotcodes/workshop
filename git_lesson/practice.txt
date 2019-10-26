@@ -3,4 +3,6 @@ this is a line I'm adding to 'practice.txt'
 This line was added to 'practice.txt' using '>>' in bash
 This line was added to 'practice.txt' using '>>' in bash
 This line was added to 'practice.txt' using '>>' in bash
-this is a new try
+this is a new try HERE IS A CHANGE I AM MAKING
+
+
