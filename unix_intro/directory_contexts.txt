@@ -1,0 +1,8 @@
+example_copy.txt
+notes.txt
+data
+directory_contexts.txt
+example.txt
+experiment
+sample_names_2.txt
+six_commands
